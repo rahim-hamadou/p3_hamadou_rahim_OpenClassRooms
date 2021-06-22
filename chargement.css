@@ -1,0 +1,47 @@
+.chargement {
+    display: block;
+    /* la base */
+    border: 10px solid grey;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border-top: 10px solid #9356dc;
+    border-bottom: 10px solid #ff79da;
+    border-left: 10px solid#99e2d0;
+    border-right: 10px solid #99e2d0;
+    /* emplacement */
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    /* animation */
+    -webkit-animation: spin 2.5s linear infinite;
+    -o-animation: spin 2.5s linear infinite;
+    animation: spin 2.5s linear infinite;
+    /* cacher le chargement */
+    transition-delay: 1s;
+    transition-property: hidden;
+}
+
+
+/* animer le chargement */
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
