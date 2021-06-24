@@ -1,14 +1,17 @@
 .chargement {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     /* la base */
     border: 10px solid grey;
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border-top: 10px solid #9356dc;
-    border-bottom: 10px solid #ff79da;
-    border-left: 10px solid#99e2d0;
-    border-right: 10px solid #99e2d0;
+    border-top: 20px solid #9356dc;
+    border-bottom: 20px solid #ff79da;
+    border-left: 20px solid#99e2d0;
+    border-right: 20px solid #99e2d0;
     /* emplacement */
     margin: auto;
     position: absolute;
@@ -30,18 +33,37 @@
 
 @-webkit-keyframes spin {
     0% {
-        -webkit-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg) scale(1);
+        border-top: 20px solid #9356dc;
+        border-bottom: 20px solid #ff79da;
+    }
+    25% {
+        border-top: 20px solid #ff79da;
+        border-bottom: 20px solid #9356dc;
+    }
+    50% {
+        -webkit-transform: rotate(180deg) scale(1.2);
+        border-top: 20px solid #ff79da;
+        border-bottom: 20px solid #9356dc;
+    }
+    75% {
+        border-top: 20px solid #9356dc;
+        border-bottom: 20px solid #ff79da;
     }
     100% {
-        -webkit-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg) scale(1);
+        border-top: 20px solid #ff79da;
+        border-bottom: 20px solid #9356dc;
     }
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+.titre {
+    font-family: Shrikhand;
+    font-size: 130%;
+    font-size: 120%;
+}
+
+.chargement i {
+    font-size: 120%;
+    color: #99e2d0;
 }
