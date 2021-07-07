@@ -1,0 +1,23 @@
+{
+    "name": "p3_rahim_hamadou",
+    "version": "1.0.0",
+    "description": "p3_rahim_hamadou",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "sass": "sass --watch ./sass/main.scss:./css/style.css "
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rumgalxdead/p3_rahim_hamadou.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/rumgalxdead/p3_rahim_hamadou/issues"
+    },
+    "homepage": "https://github.com/rumgalxdead/p3_rahim_hamadou#readme",
+    "dependencies": {
+        "sass": "^1.35.1"
+    }
+}

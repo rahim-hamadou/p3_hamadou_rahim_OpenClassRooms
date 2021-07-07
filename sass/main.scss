@@ -10,8 +10,10 @@
     font-weight: 100 1000;
 }
 
-
-/* couleurs
-
-#9356DC #FF79DA #99E2D0
-*/
+@import "./pages/menus.scss";
+body {
+    font-family: Roboto;
+    main {
+        background: red;
+    }
+}
