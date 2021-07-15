@@ -1,4 +1,12 @@
+.trait__dessous {
+    border-top: 3px solid #99e2d0;
+    width: 75px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
 body {
+    width: 100%;
     margin: 0;
     height: 100%;
 }
@@ -7,16 +15,29 @@ header {
     .head-page {
         position: fixed;
         top: 0;
-        background: green;
+        background: rgb(255, 255, 255);
         width: 100%;
-        margin-bottom: 0;
+        padding: 18px;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        & a {
+            font-size: 130%;
+        }
+        & div {
+            opacity: 0;
+        }
+        & h1 {
+            align-items: center;
+        }
     }
     .background-page {
         top: 0;
+        width: 100%;
         position: fixed;
         z-index: -1;
         img {
-            object-fit: cover;
             max-width: 100%;
             object-fit: cover;
         }
@@ -25,17 +46,157 @@ header {
 
 .content {
     width: 100%;
-    border: 1px solid black;
-    background: grey;
+    border: 0px solid #1c6ea4;
+    border-radius: 45px 45px 0px 0px;
+    background: #f6f6f6;
     margin-top: 55%;
     margin-bottom: 0;
-    /* opacity: 0.3; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    & .title {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 30px;
+        & h1 {
+            font-family: "Shrikhand", cursive;
+            font-weight: bold;
+            font-size: 200%;
+        }
+    }
+    & .choice {
+        width: 100%;
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__choices {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__choices h2 {
+            // border-bottom: 1px solid #99e2d0;
+            margin: 25px;
+            margin-bottom: 8px;
+            margin-left: 10px;
+        }
+        &__choices__type {
+            background: white;
+            display: flex;
+            align-items: flex-end;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            border: 0.3px solid #1c6ea400;
+            border-radius: 25px;
+            width: 100%;
+            height: 80px;
+            box-shadow: 0px 5px 5px 1px rgb(0 0 0 / 10%);
+            justify-content: space-between;
+            padding: 0 10px;
+            margin: 10px 0;
+            &__text {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-items: flex-start;
+                height: 100%;
+                justify-content: center;
+                & h4 {
+                    font-weight: normal;
+                }
+            }
+        }
+    }
 }
 
-footer {
-    margin: 0;
-    background: purple;
-    h3 {
-        margin-top: 0;
+.order {
+    display: flex;
+    padding: 10px;
+    height: 45px;
+    margin: 50px 0;
+    color: white;
+    border: 1px solid #a4a4a4;
+    border-radius: 40px;
+    width: 40%;
+    background: linear-gradient(0deg, #9356dc, #ff79da);
+    & a {
+        text-align: center;
+        font-size: 120%;
+        margin: auto;
+        padding: auto;
+        font-weight: normal;
+    }
+}
+
+// mobile
+@media screen and (max-width: 870px) {
+    header {
+        .background-page {
+            top: 30px;
+        }
+    }
+    .content {
+        margin-top: 65%;
+        & .choice {
+            &__choices {
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                & h2 {
+                    // margin-right: 70%;
+                }
+                &__type {
+                    &__text {
+                        justify-content: space-around;
+                    }
+                    &__price {
+                        padding-bottom: 8px;
+                    }
+                }
+            }
+        }
+        & .title {
+            justify-content: space-around;
+        }
+    }
+}
+
+// tablette
+@media screen and (min-width: 870px) and (max-width: 1330px) {
+    header {
+        .background-page {
+            top: 30px;
+        }
+    }
+    .content {
+        margin-top: 65%;
+        & .choice {
+            &__choices {
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                & h2 {
+                    // margin-right: 70%;
+                }
+                &__type {
+                    &__text {
+                        justify-content: space-around;
+                    }
+                    &__price {
+                        padding-bottom: 8px;
+                    }
+                }
+            }
+        }
+        & .title {
+            justify-content: space-around;
+        }
     }
 }

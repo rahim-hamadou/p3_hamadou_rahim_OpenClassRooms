@@ -228,7 +228,7 @@ header {
 }
 
 footer {
-    background: #353535;
+    background: #595959;
     bottom: 0px;
     & h3 {
         font-family: "Shrikhand", cursive;
@@ -285,6 +285,7 @@ footer {
         display: flex;
         justify-content: space-around;
         flex-direction: column;
+        align-items: center;
         &__step {
             margin-bottom: 20px;
         }
@@ -298,7 +299,7 @@ footer {
         &__places {
             width: 90%;
             & p {
-                left: 72%;
+                left: 86%;
                 top: 7%;
             }
             &__description {
@@ -315,7 +316,7 @@ footer {
 }
 
 // tablette
-@media screen and (min-width: 870px) and (max-width: 1024px) {
+@media screen and (min-width: 870px) and (max-width: 1330px) {
     body {
         width: 100%;
     }
