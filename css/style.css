@@ -1,3 +1,43 @@
+body {
+  margin: 0;
+  height: 100%;
+}
+
+header .head-page {
+  position: fixed;
+  top: 0;
+  background: green;
+  width: 100%;
+  margin-bottom: 0;
+}
+header .background-page {
+  top: 0;
+  position: fixed;
+  z-index: -1;
+}
+header .background-page img {
+  object-fit: cover;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.content {
+  width: 100%;
+  border: 1px solid black;
+  background: grey;
+  margin-top: 55%;
+  margin-bottom: 0;
+  /* opacity: 0.3; */
+}
+
+footer {
+  margin: 0;
+  background: purple;
+}
+footer h3 {
+  margin-top: 0;
+}
+
 @font-face {
   font-family: "Shrikhand";
   src: url("./police/Shrikhand/Shrikhand-Regular.ttf");
@@ -9,14 +49,395 @@
   font-weight: 100 1000;
 }
 body {
-  font-family: shrikhand;
+  margin: 0;
+  height: 100%;
+}
+
+header .head-page {
+  position: fixed;
+  top: 0;
+  background: green;
+  width: 100%;
+  margin-bottom: 0;
+}
+header .background-page {
+  top: 0;
+  position: fixed;
+  z-index: -1;
+}
+header .background-page img {
+  object-fit: cover;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.content {
+  width: 100%;
+  border: 1px solid black;
+  background: grey;
+  margin-top: 55%;
+  margin-bottom: 0;
+  /* opacity: 0.3; */
+}
+
+footer {
+  margin: 0;
+  background: purple;
+}
+footer h3 {
+  margin-top: 0;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
-  font-family: Roboto;
+  font-family: "roboto";
 }
-body main {
-  background: red;
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.logo {
+  font-family: "Shrikhand", cursive;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  width: 100%;
+  border-bottom: 2px solid #a4a4a4;
+  box-shadow: 0px 0px 20px 12px rgba(0, 0, 0, 0.26);
+}
+.logo h1 {
+  margin: auto;
+  text-align: center;
+}
+
+.exploration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-between;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  background: #ededed;
+}
+
+.exploration .location {
+  height: 50px;
+  width: 100%;
+  background: #dedede;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  box-shadow: inset 0px 12px 5px -6px rgba(206, 206, 206, 0.8);
+  border: 0px solid #cecece;
+}
+.exploration .location i {
+  margin: 15px;
+}
+
+.introduction {
+  background: #ededed;
+  width: 100%;
+}
+.introduction h2 {
+  text-align: center;
+  margin: 25px 0;
+}
+.introduction p {
+  text-align: center;
+  font-size: 120%;
+  margin: 25px 0;
+  font-weight: normal;
+}
+.introduction__search {
+  margin: auto;
+  color: white;
+  text-align: center;
+  border: 1px solid #a4a4a4;
+  border-radius: 40px;
+  width: 60%;
+  background: linear-gradient(0deg, #9356dc, #ff79da);
+}
+
+.fonction h2 {
+  padding: 30px 40px;
+}
+
+.fonctions {
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.fonctions__step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  border: 0.3px solid #1c6ea400;
+  border-radius: 25px;
+  position: relative;
+  width: 350px;
+  height: 70px;
+  box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+.fonctions__step:hover {
+  background: #f5edff;
+}
+.fonctions__step:hover i {
+  color: #9356dc;
+}
+.fonctions__step i {
+  color: #7e7e7e;
+  margin-right: 40px;
+  font-size: 120%;
+}
+.fonctions__step__steps {
+  position: absolute;
+  left: -20px;
+  border: 0px solid #1c6ea4;
+  border-radius: 25px;
+  padding: 6px 14px;
+  background: #9356dc;
+}
+
+.place h2 {
+  padding: 40px 40px;
+}
+.place__grille {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding-bottom: 30px;
+}
+.place__grille__places {
+  color: black;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 0px solid black;
+  border-radius: 20px;
+  box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  overflow: hidden;
+  width: 22%;
+  height: 230px;
+  scale: 1;
+}
+.place__grille__places:hover {
+  -webkit-transition: all 0.3s 0s ease;
+  -moz-transition: all 0.3s 0s ease;
+  -o-transition: all 0.3s 0s ease;
+  transition: all 0.3s 0s ease;
+  transform: scale(1.08);
+}
+.place__grille__places p {
+  position: absolute;
+  display: block;
+  border: 0px solid black;
+  border-radius: 5px;
+  padding: 5px 10px;
+  left: 200px;
+  top: 10px;
+  color: #008766;
+  background: #99e2d0;
+}
+.place__grille__places__img img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  max-width: 100%;
+  object-fit: cover;
+}
+.place__grille__places__description {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.place__grille__places__description__text {
+  margin-right: 20px;
+}
+.place__grille__places__description__text h3 {
+  font-weight: bold;
+}
+.place__grille__places__description__text h4 {
+  font-weight: normal;
+}
+.place__grille__places__description__heart {
+  font-size: 130%;
+}
+
+footer {
+  background: #353535;
+  bottom: 0px;
+}
+footer h3 {
+  font-family: "Shrikhand", cursive;
+  font-weight: bold;
+  padding: 20px 0;
+  margin-left: 40px;
+}
+footer ul {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+}
+footer ul li {
+  margin: 3px;
+  height: 30px;
+  list-style: none;
+}
+footer ul li p {
+  margin: 0;
+}
+footer ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  color: black;
+}
+footer ul li a i {
+  margin-right: 15px;
+}
+
+.footer {
+  color: white;
+}
+.footer a {
+  color: white;
+}
+
+@media screen and (max-width: 870px) {
+  body {
+    width: 100%;
+  }
+
+  .introduction__search {
+    width: 70%;
+  }
+
+  .fonction h2 {
+    padding: 30px 20px;
+  }
+
+  .fonctions {
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .fonctions__step {
+    margin-bottom: 20px;
+  }
+
+  .place h2 {
+    padding: 40px 20px;
+  }
+
+  .place__grille {
+    display: flex;
+    flex-direction: column;
+  }
+  .place__grille__places {
+    width: 90%;
+  }
+  .place__grille__places p {
+    left: 72%;
+    top: 7%;
+  }
+  .place__grille__places__description {
+    justify-content: space-between;
+  }
+  .place__grille__places__description__text {
+    margin-left: 20px;
+  }
+  .place__grille__places__description__heart {
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 870px) and (max-width: 1024px) {
+  body {
+    width: 100%;
+  }
+
+  .introduction__search {
+    width: 70%;
+  }
+
+  .fonction h2 {
+    padding: 30px 20px;
+  }
+
+  .fonctions {
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .fonctions__step {
+    margin-bottom: 20px;
+    width: 270px;
+    justify-content: space-evenly;
+  }
+  .fonctions__step__steps {
+    left: -25px;
+  }
+  .fonctions__step i {
+    margin: 0;
+    font-size: 100%;
+  }
+
+  .place h2 {
+    padding: 40px 20px;
+  }
+
+  .place__grille {
+    display: flex;
+    flex-direction: column;
+  }
+  .place__grille__places {
+    width: 90%;
+  }
+  .place__grille__places p {
+    left: 88%;
+    top: 10%;
+  }
+  .place__grille__places__description {
+    justify-content: space-between;
+  }
+  .place__grille__places__description__text {
+    margin-left: 20px;
+  }
+  .place__grille__places__description__heart {
+    margin-right: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
