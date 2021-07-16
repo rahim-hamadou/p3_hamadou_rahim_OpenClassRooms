@@ -1,5 +1,6 @@
 @import "./utils/tools.scss";
 @import "./pages/menus.scss";
+@import "./utils/responsive";
 @font-face {
     font-family: "Shrikhand";
     src: url("./police/Shrikhand/Shrikhand-Regular.ttf");
@@ -12,7 +13,6 @@
     font-weight: 100 1000;
 }
 
-@import "./pages/menus.scss";
 @mixin flex-center {
     display: flex;
     flex-direction: column;
@@ -221,6 +221,9 @@ header {
                 }
                 &__heart {
                     font-size: 130%;
+                    &:hover {
+                        animation: color-change-2x 1s linear forwards;
+                    }
                 }
             }
         }
@@ -269,102 +272,14 @@ footer {
     }
 }
 
-// mobile
-@media screen and (max-width: 870px) {
-    body {
-        width: 100%;
-    }
-    .introduction__search {
-        width: 70%;
-    }
-    .fonction h2 {
-        padding: 30px 20px;
-    }
-    .fonctions {
-        padding: 30px;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        align-items: center;
-        &__step {
-            margin-bottom: 20px;
-        }
-    }
-    .place h2 {
-        padding: 40px 20px;
-    }
-    .place__grille {
-        display: flex;
-        flex-direction: column;
-        &__places {
-            width: 90%;
-            & p {
-                left: 86%;
-                top: 7%;
-            }
-            &__description {
-                justify-content: space-between;
-                &__text {
-                    margin-left: 20px;
-                }
-                &__heart {
-                    margin-right: 20px;
-                }
-            }
-        }
-    }
-}
-
-// tablette
-@media screen and (min-width: 870px) and (max-width: 1330px) {
-    body {
-        width: 100%;
-    }
-    .introduction__search {
-        width: 70%;
-    }
-    .fonction h2 {
-        padding: 30px 20px;
-    }
-    .fonctions {
-        padding: 30px;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-        &__step {
-            margin-bottom: 20px;
-            width: 270px;
-            justify-content: space-evenly;
-            &__steps {
-                left: -25px;
-            }
-            & i {
-                margin: 0;
-                font-size: 100%;
-            }
-        }
-    }
-    .place h2 {
-        padding: 40px 20px;
-    }
-    .place__grille {
-        display: flex;
-        flex-direction: column;
-        &__places {
-            width: 90%;
-            & p {
-                left: 88%;
-                top: 10%;
-            }
-            &__description {
-                justify-content: space-between;
-                &__text {
-                    margin-left: 20px;
-                }
-                &__heart {
-                    margin-right: 20px;
-                }
-            }
-        }
-    }
+.bloc-couleur {
+    width: 150px;
+    height: 150px;
+    border: 1px solid grey;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
 }

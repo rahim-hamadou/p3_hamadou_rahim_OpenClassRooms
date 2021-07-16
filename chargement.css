@@ -1,4 +1,5 @@
 .chargement {
+    font-family: "Shrikhand", cursive;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,10 +23,9 @@
     /* animation */
     -webkit-animation: spin 2.5s linear infinite;
     -o-animation: spin 2.5s linear infinite;
-    animation: spin 2.5s linear infinite;
+    animation: spin 5s linear infinite;
     /* cacher le chargement */
     transition-delay: 1s;
-    transition-property: hidden;
 }
 
 
@@ -33,9 +33,13 @@
 
 @-webkit-keyframes spin {
     0% {
+        opacity: 0;
         -webkit-transform: rotate(0deg) scale(1);
         border-top: 20px solid #9356dc;
         border-bottom: 20px solid #ff79da;
+    }
+    1% {
+        opacity: 1;
     }
     25% {
         border-top: 20px solid #ff79da;
@@ -54,16 +58,18 @@
         -webkit-transform: rotate(360deg) scale(1);
         border-top: 20px solid #ff79da;
         border-bottom: 20px solid #9356dc;
+        opacity: 0;
     }
 }
 
-.titre {
-    font-family: Shrikhand;
+
+/* .titre {
     font-size: 130%;
     font-size: 120%;
-}
+} */
 
-.chargement i {
+
+/* .chargement i {
     font-size: 120%;
     color: #99e2d0;
-}
+} */
