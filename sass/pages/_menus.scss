@@ -13,6 +13,7 @@ body {
 
 header {
     .head-page {
+        z-index: 999;
         position: fixed;
         top: 0;
         background: rgb(255, 255, 255);
@@ -94,8 +95,8 @@ header {
         &__choices__type {
             position: relative;
             // overflow: hidden;
-            animation: choice 2500ms;
-            -webkit-animation: choice 2500ms;
+            animation: choice 700ms linear forwards;
+            -webkit-animation: choice 700ms linear forwards;
             background: white;
             display: flex;
             align-items: center;
@@ -111,13 +112,13 @@ header {
             padding-right: 0;
             margin: 10px 0;
             &:hover i {
-                animation: spin-check 0.8s 0.8s;
+                animation: spin-check 0.3s 0.2s linear forwards;
             }
             &:hover .choice__choices__type__check {
-                animation: slide-check 1000ms;
+                animation: slide-check 300ms linear forwards;
             }
             &:hover .choice__choices__type__price {
-                animation: slide-price 1000ms;
+                animation: slide-price 300ms linear forwards;
             }
             &__text {
                 display: flex;
@@ -166,5 +167,76 @@ header {
         margin: auto;
         padding: auto;
         font-weight: normal;
+    }
+}
+
+// mobile
+@media screen and (max-width: 870px) {
+    header {
+        .background-page {
+            top: 30px;
+        }
+    }
+    .content {
+        margin-top: 65%;
+        margin-top: 65%;
+        margin-left: 0;
+        margin-right: 0;
+        & .choice {
+            &__choices {
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                & h2 {
+                    // margin-right: 70%;
+                }
+                &__type {
+                    width: 93%;
+                    &__text {
+                        justify-content: space-around;
+                    }
+                    &__price {
+                        padding-bottom: 8px;
+                    }
+                }
+            }
+        }
+        & .title {
+            justify-content: space-around;
+        }
+    }
+}
+
+// tablette
+@media screen and (min-width: 870px) and (max-width: 1330px) {
+    header {
+        .background-page {
+            top: 30px;
+        }
+    }
+    .content {
+        margin-top: 65%;
+        & .choice {
+            &__choices {
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-right: 20px;
+                & h2 {}
+                &__type {
+                    &__text {
+                        justify-content: space-around;
+                    }
+                    &__price {
+                        padding-bottom: 8px;
+                    }
+                }
+            }
+        }
+        & .title {
+            justify-content: space-around;
+        }
     }
 }
