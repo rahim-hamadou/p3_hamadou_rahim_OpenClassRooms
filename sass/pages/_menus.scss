@@ -19,29 +19,47 @@ header {
         background: rgb(255, 255, 255);
         width: 100%;
         padding: 18px;
-        display: flex;
-        align-items: center;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        & a {
-            font-size: 130%;
-        }
-        & div {
-            opacity: 0;
-        }
-        & h1 {
+        // display: flex;
+        // align-items: center;
+        // flex-wrap: nowrap;
+        // justify-content: center;
+        &__content {
+            display: flex;
+            flex-direction: row;
             align-items: center;
+            justify-content: space-between;
+            width: 60;
+            width: 60%;
         }
     }
-    .background-page {
-        top: 0;
-        width: 100%;
-        position: fixed;
-        z-index: -1;
-        img {
-            max-width: 100%;
-            object-fit: cover;
-        }
+    & i {
+        font-size: 200%;
+        margin-left: 25px;
+        cursor: pointer;
+    }
+    & .logo {
+        border: none;
+        box-shadow: none;
+    }
+    // & div {
+    //     opacity: 0;
+    // }
+    & h1 {
+        align-items: center;
+    }
+    & a {
+        margin-left: 10%;
+    }
+}
+
+.background-page {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    img {
+        max-width: 100%;
+        object-fit: cover;
     }
 }
 
@@ -73,6 +91,23 @@ header {
                 animation: color-change-2x 1s linear forwards;
             }
         }
+        .fa-heart {
+            font-size: 150%;
+            color: white;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+        }
+        .fa-heart::before {
+            content: "\f004";
+            font-weight: bold;
+            transition: color 1s ease-out;
+        }
+        .fa-heart:hover::before {
+            -webkit-text-stroke-width: initial;
+            -webkit-text-stroke-color: white;
+            color: #9356dc;
+            cursor: pointer;
+        }
     }
     & .choice {
         width: 100%;
@@ -93,6 +128,8 @@ header {
             margin-left: 10px;
         }
         &__choices__type {
+            text-overflow: ellipsis;
+            overflow: hidden;
             position: relative;
             // overflow: hidden;
             animation: choice 700ms linear forwards;
@@ -111,6 +148,7 @@ header {
             padding: 0 10px;
             padding-right: 0;
             margin: 10px 0;
+            text-overflow: ellipsis;
             &:hover i {
                 animation: spin-check 0.3s 0.2s linear forwards;
             }
@@ -121,6 +159,8 @@ header {
                 animation: slide-price 300ms linear forwards;
             }
             &__text {
+                text-overflow: ellipsis;
+                overflow: hidden;
                 display: flex;
                 flex-direction: column;
                 flex-wrap: nowrap;
@@ -128,6 +168,8 @@ header {
                 height: 100%;
                 justify-content: center;
                 & h4 {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
                     font-weight: normal;
                 }
             }
@@ -176,6 +218,18 @@ header {
         .background-page {
             top: 30px;
         }
+        & .head-page__content {
+            width: 80%;
+            & i {
+                font-size: 150%;
+                margin-bottom: 10px;
+            }
+            & .logo {
+                &__block {
+                    margin-left: 25px;
+                }
+            }
+        }
     }
     .content {
         margin-top: 65%;
@@ -213,6 +267,9 @@ header {
     header {
         .background-page {
             top: 30px;
+        }
+        & .head-page__content {
+            width: 68%;
         }
     }
     .content {

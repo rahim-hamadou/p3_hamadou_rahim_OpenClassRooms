@@ -34,70 +34,94 @@ a {
     text-decoration: none;
 }
 
-.loader {
-    /* la base */
-    font-family: "Shrikhand", cursive;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* emplacement */
-    margin: auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    // back
-    background: linear-gradient(to bottom right, #ff79da, #9356dc, #99e2d0);
-    width: 100%;
-    height: 100%;
-    line-height: 100%;
-    vertical-align: middle;
-    text-align: center;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    animation: loader 2.5s 1.2s linear forwards;
-    &__page {
-        border: 10px solid grey;
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        border-top: 20px solid #9356dc;
-        border-bottom: 20px solid #ff79da;
-        border-left: 20px solid#99e2d0;
-        border-right: 20px solid #99e2d0;
-        animation: loader__page 1.5s linear 1s forwards;
-        & p {
-            font-family: "Shrikhand", cursive;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-    }
-}
-
+// .loader {
+//     /* la base */
+//     font-family: "Shrikhand", cursive;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     /* emplacement */
+//     margin: auto;
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     top: 0;
+//     // back
+//     background: linear-gradient(to bottom right, #ff79da, #9356dc, #99e2d0);
+//     width: 100%;
+//     height: 100%;
+//     line-height: 100%;
+//     vertical-align: middle;
+//     text-align: center;
+//     position: fixed;
+//     z-index: 9999;
+//     top: 0;
+//     left: 0;
+//     pointer-events: none;
+//     animation: loader 2.5s 1.2s linear forwards;
+//     &__page {
+//         border: 10px solid grey;
+//         width: 200px;
+//         height: 200px;
+//         border-radius: 50%;
+//         border-top: 20px solid #9356dc;
+//         border-bottom: 20px solid #ff79da;
+//         border-left: 20px solid#99e2d0;
+//         border-right: 20px solid #99e2d0;
+//         animation: loader__page 1.5s linear 1s forwards;
+//         & p {
+//             font-family: "Shrikhand", cursive;
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             text-align: center;
+//         }
+//     }
+// }
 .logo {
     font-family: "Shrikhand", cursive;
     font-weight: bold;
     font-size: 120%;
 }
 
-header {
-    @include flex-center;
-}
-
-.logo {
-    width: 100%;
-    border-bottom: 2px solid #a4a4a4;
-    box-shadow: 0px 0px 20px 12px rgba(0, 0, 0, 0.26);
+.logo__main {
+    font-family: "Shrikhand", cursive;
+    font-weight: bold;
+    font-size: 120%;
+    padding: 0 40px;
+    border: none;
+    box-shadow: none;
     & h1 {
         margin: auto;
         text-align: center;
+    }
+    & img {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+header {
+    @include flex-center;
+    & .logo {
+        border: none;
+        box-shadow: none;
+        // width: 100%;
+        // border-bottom: 2px solid #a4a4a4;
+        // box-shadow: 0px 0px 20px 12px rgba(0, 0, 0, 0.26);
+        & h1 {
+            margin: auto;
+            text-align: center;
+        }
+        & img {
+            width: 100%;
+            margin: auto;
+        }
+    }
+    & a {
+        margin: 0;
     }
 }
 
@@ -126,6 +150,10 @@ header {
     border: 0px solid #cecece;
     & i {
         margin: 15px;
+    }
+    & p {
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 }
 
@@ -164,15 +192,16 @@ header {
     display: flex;
     justify-content: space-around;
     &__step {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: nowrap;
-        flex-direction: row;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-wrap: nowrap;
+        // flex-direction: row;
+        text-align: center;
         border: 0.3px solid #1c6ea400;
         border-radius: 25px;
         position: relative;
-        width: 350px;
+        width: 30%;
         height: 70px;
         box-shadow: 0px 5px 5px 1px rgb(0 0 0 / 10%);
         font-weight: bold;
@@ -184,16 +213,21 @@ header {
         }
         & i {
             color: #7e7e7e;
-            margin-right: 40px;
+            margin-right: 60px;
             font-size: 120%;
         }
         &__steps {
             position: absolute;
             left: -20px;
+            top: 15px;
             border: 0px solid #1c6ea4;
             border-radius: 25px;
             padding: 6px 14px;
             background: #9356dc;
+        }
+        &__detail {
+            padding-top: 20px;
+            width: 100%;
         }
     }
 }
@@ -231,16 +265,20 @@ header {
                 transition: all 0.3s 0s ease;
                 transform: scale(1.08);
             }
-            & p {
+            & .new {
                 position: absolute;
-                display: block;
-                border: 0px solid black;
-                border-radius: 5px;
-                padding: 5px 10px;
-                left: 200px;
-                top: 10px;
-                color: #008766;
-                background: #99e2d0;
+                text-align: right;
+                top: 10%;
+                right: 5%;
+                & span {
+                    font-family: "roboto";
+                    background-color: #99e2d0;
+                    padding: 5px 5px;
+                    border-radius: 5px 5px;
+                    color: #008766;
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
             }
             &__img {
                 & img {
@@ -260,20 +298,44 @@ header {
                 &__text {
                     margin-right: 20px;
                     & h3 {
+                        text-overflow: ellipsis;
+                        overflow: hidden;
                         font-weight: bold;
                     }
                     & h4 {
+                        text-overflow: ellipsis;
+                        overflow: hidden;
                         font-weight: normal;
                     }
                 }
                 &__heart {
+                    position: relative;
                     font-size: 130%;
-                    &:hover {
-                        animation: color-change-2x 1s linear forwards;
-                    }
+                    // &:hover {
+                    //     background-clip: text;
+                    //     animation: color-change-2x 1.2s linear forwards;
+                    // }
                 }
             }
         }
+    }
+    .fa-heart {
+        font-size: 1.3rem;
+        color: white;
+        margin-top: -60px;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+    }
+    .fa-heart::before {
+        content: "\f004";
+        font-weight: bold;
+        transition: color 1s ease-out;
+    }
+    .fa-heart:hover::before {
+        -webkit-text-stroke-width: initial;
+        -webkit-text-stroke-color: white;
+        color: #9356dc;
+        cursor: pointer;
     }
 }
 
@@ -341,6 +403,8 @@ footer {
     }
     .fonction h2 {
         padding: 30px 20px;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
     .fonctions {
         padding: 30px;
@@ -350,10 +414,18 @@ footer {
         align-items: center;
         &__step {
             margin-bottom: 20px;
+            width: 95%;
+            &__detail {
+                & i {
+                    margin-right: 10px;
+                }
+            }
         }
     }
     .place h2 {
         padding: 40px 20px;
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
     .place__grille {
         display: flex;
@@ -401,7 +473,7 @@ footer {
                 left: -25px;
             }
             & i {
-                margin: 0;
+                margin-right: 10px;
                 font-size: 100%;
             }
         }

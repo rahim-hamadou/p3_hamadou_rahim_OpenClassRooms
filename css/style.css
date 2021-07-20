@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes loader {
   0% {
     opacity: 1;
@@ -119,27 +120,38 @@ header .head-page {
   background: white;
   width: 100%;
   padding: 18px;
+}
+header .head-page__content {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 60;
+  width: 60%;
 }
-header .head-page a {
-  font-size: 130%;
+header i {
+  font-size: 200%;
+  margin-left: 25px;
+  cursor: pointer;
 }
-header .head-page div {
-  opacity: 0;
+header .logo {
+  border: none;
+  box-shadow: none;
 }
-header .head-page h1 {
+header h1 {
   align-items: center;
 }
-header .background-page {
+header a {
+  margin-left: 10%;
+}
+
+.background-page {
   top: 0;
   width: 100%;
   position: fixed;
   z-index: -1;
 }
-header .background-page img {
+.background-page img {
   max-width: 100%;
   object-fit: cover;
 }
@@ -174,6 +186,23 @@ header .background-page img {
 .content .title i:hover {
   animation: color-change-2x 1s linear forwards;
 }
+.content .title .fa-heart {
+  font-size: 150%;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+.content .title .fa-heart::before {
+  content: "";
+  font-weight: bold;
+  transition: color 1s ease-out;
+}
+.content .title .fa-heart:hover::before {
+  -webkit-text-stroke-width: initial;
+  -webkit-text-stroke-color: white;
+  color: #9356dc;
+  cursor: pointer;
+}
 .content .choice {
   width: 100%;
   align-content: center;
@@ -193,6 +222,8 @@ header .background-page img {
   margin-left: 10px;
 }
 .content .choice__choices__type {
+  text-overflow: ellipsis;
+  overflow: hidden;
   position: relative;
   animation: choice 700ms linear forwards;
   -webkit-animation: choice 700ms linear forwards;
@@ -210,6 +241,7 @@ header .background-page img {
   padding: 0 10px;
   padding-right: 0;
   margin: 10px 0;
+  text-overflow: ellipsis;
 }
 .content .choice__choices__type:hover i {
   animation: spin-check 0.3s 0.2s linear forwards;
@@ -221,6 +253,8 @@ header .background-page img {
   animation: slide-price 300ms linear forwards;
 }
 .content .choice__choices__type__text {
+  text-overflow: ellipsis;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -229,6 +263,8 @@ header .background-page img {
   justify-content: center;
 }
 .content .choice__choices__type__text h4 {
+  text-overflow: ellipsis;
+  overflow: hidden;
   font-weight: normal;
 }
 .content .choice__choices__type__price {
@@ -271,6 +307,16 @@ header .background-page img {
   header .background-page {
     top: 30px;
   }
+  header .head-page__content {
+    width: 80%;
+  }
+  header .head-page__content i {
+    font-size: 150%;
+    margin-bottom: 10px;
+  }
+  header .head-page__content .logo__block {
+    margin-left: 25px;
+  }
 
   .content {
     margin-top: 65%;
@@ -300,6 +346,9 @@ header .background-page img {
 @media screen and (min-width: 870px) and (max-width: 1330px) {
   header .background-page {
     top: 30px;
+  }
+  header .head-page__content {
+    width: 68%;
   }
 
   .content {
@@ -346,56 +395,27 @@ a {
   text-decoration: none;
 }
 
-.loader {
-  /* la base */
-  font-family: "Shrikhand", cursive;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* emplacement */
-  margin: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  background: linear-gradient(to bottom right, #ff79da, #9356dc, #99e2d0);
-  width: 100%;
-  height: 100%;
-  line-height: 100%;
-  vertical-align: middle;
-  text-align: center;
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  animation: loader 2.5s 1.2s linear forwards;
-}
-.loader__page {
-  border: 10px solid grey;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border-top: 20px solid #9356dc;
-  border-bottom: 20px solid #ff79da;
-  border-left: 20px solid #99e2d0;
-  border-right: 20px solid #99e2d0;
-  animation: loader__page 1.5s linear 1s forwards;
-}
-.loader__page p {
-  font-family: "Shrikhand", cursive;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .logo {
   font-family: "Shrikhand", cursive;
   font-weight: bold;
   font-size: 120%;
+}
+
+.logo__main {
+  font-family: "Shrikhand", cursive;
+  font-weight: bold;
+  font-size: 120%;
+  padding: 0 40px;
+  border: none;
+  box-shadow: none;
+}
+.logo__main h1 {
+  margin: auto;
+  text-align: center;
+}
+.logo__main img {
+  width: 100%;
+  margin: auto;
 }
 
 header {
@@ -404,15 +424,20 @@ header {
   align-content: space-around;
   align-items: center;
 }
-
-.logo {
-  width: 100%;
-  border-bottom: 2px solid #a4a4a4;
-  box-shadow: 0px 0px 20px 12px rgba(0, 0, 0, 0.26);
+header .logo {
+  border: none;
+  box-shadow: none;
 }
-.logo h1 {
+header .logo h1 {
   margin: auto;
   text-align: center;
+}
+header .logo img {
+  width: 100%;
+  margin: auto;
+}
+header a {
+  margin: 0;
 }
 
 .exploration {
@@ -441,6 +466,10 @@ header {
 }
 .exploration .location i {
   margin: 15px;
+}
+.exploration .location p {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .introduction {
@@ -477,15 +506,11 @@ header {
   justify-content: space-around;
 }
 .fonctions__step {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  flex-direction: row;
+  text-align: center;
   border: 0.3px solid #1c6ea400;
   border-radius: 25px;
   position: relative;
-  width: 350px;
+  width: 30%;
   height: 70px;
   box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.1);
   font-weight: bold;
@@ -498,16 +523,21 @@ header {
 }
 .fonctions__step i {
   color: #7e7e7e;
-  margin-right: 40px;
+  margin-right: 60px;
   font-size: 120%;
 }
 .fonctions__step__steps {
   position: absolute;
   left: -20px;
+  top: 15px;
   border: 0px solid #1c6ea4;
   border-radius: 25px;
   padding: 6px 14px;
   background: #9356dc;
+}
+.fonctions__step__detail {
+  padding-top: 20px;
+  width: 100%;
 }
 
 .place h2 {
@@ -544,16 +574,20 @@ header {
   transition: all 0.3s 0s ease;
   transform: scale(1.08);
 }
-.place__grille__places p {
+.place__grille__places .new {
   position: absolute;
-  display: block;
-  border: 0px solid black;
-  border-radius: 5px;
-  padding: 5px 10px;
-  left: 200px;
-  top: 10px;
+  text-align: right;
+  top: 10%;
+  right: 5%;
+}
+.place__grille__places .new span {
+  font-family: "roboto";
+  background-color: #99e2d0;
+  padding: 5px 5px;
+  border-radius: 5px 5px;
   color: #008766;
-  background: #99e2d0;
+  font-size: 1rem;
+  font-weight: bold;
 }
 .place__grille__places__img img {
   width: 100%;
@@ -573,16 +607,36 @@ header {
   margin-right: 20px;
 }
 .place__grille__places__description__text h3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
   font-weight: bold;
 }
 .place__grille__places__description__text h4 {
+  text-overflow: ellipsis;
+  overflow: hidden;
   font-weight: normal;
 }
 .place__grille__places__description__heart {
+  position: relative;
   font-size: 130%;
 }
-.place__grille__places__description__heart:hover {
-  animation: color-change-2x 1s linear forwards;
+.place .fa-heart {
+  font-size: 1.3rem;
+  color: white;
+  margin-top: -60px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+.place .fa-heart::before {
+  content: "";
+  font-weight: bold;
+  transition: color 1s ease-out;
+}
+.place .fa-heart:hover::before {
+  -webkit-text-stroke-width: initial;
+  -webkit-text-stroke-color: white;
+  color: #9356dc;
+  cursor: pointer;
 }
 
 footer {
@@ -650,6 +704,8 @@ footer ul li a i {
 
   .fonction h2 {
     padding: 30px 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   .fonctions {
@@ -661,10 +717,16 @@ footer ul li a i {
   }
   .fonctions__step {
     margin-bottom: 20px;
+    width: 95%;
+  }
+  .fonctions__step__detail i {
+    margin-right: 10px;
   }
 
   .place h2 {
     padding: 40px 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   .place__grille {
@@ -716,7 +778,7 @@ footer ul li a i {
     left: -25px;
   }
   .fonctions__step i {
-    margin: 0;
+    margin-right: 10px;
     font-size: 100%;
   }
 
