@@ -229,7 +229,7 @@ header a {
   -webkit-animation: choice 700ms linear forwards;
   background: white;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   flex-wrap: nowrap;
   flex-direction: row;
   border: 0.3px solid #1c6ea400;
@@ -243,14 +243,18 @@ header a {
   margin: 10px 0;
   text-overflow: ellipsis;
 }
+.content .choice__choices__type:hover {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .content .choice__choices__type:hover i {
-  animation: spin-check 0.3s 0.2s linear forwards;
+  animation: spin-check 0.4s 0.3s linear forwards;
 }
 .content .choice__choices__type:hover .choice__choices__type__check {
-  animation: slide-check 300ms linear forwards;
+  animation: slide-check 500ms linear forwards;
 }
 .content .choice__choices__type:hover .choice__choices__type__price {
-  animation: slide-price 300ms linear forwards;
+  animation: slide-price 500ms linear forwards;
 }
 .content .choice__choices__type__text {
   text-overflow: ellipsis;
@@ -268,9 +272,8 @@ header a {
   font-weight: normal;
 }
 .content .choice__choices__type__price {
-  position: absolute;
-  left: 92%;
-  margin-bottom: -30px;
+  margin-right: 20px;
+  margin-bottom: 10px;
 }
 .content .choice__choices__type__check {
   left: 100%;
@@ -284,6 +287,20 @@ header a {
   color: white;
 }
 
+.choice__choices__type__text:hover h3 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 50%;
+}
+
+.choice__choices__type__text:hover h4 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 50%;
+}
+
 .order {
   display: flex;
   padding: 10px;
@@ -294,6 +311,12 @@ header a {
   border-radius: 40px;
   width: 40%;
   background: linear-gradient(0deg, #9356dc, #ff79da);
+  box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.order:hover {
+  box-shadow: 1px 12px 13px -11px rgba(0, 0, 0, 0.75);
+  transform: scale(1.1);
 }
 .order a {
   text-align: center;
@@ -301,6 +324,7 @@ header a {
   margin: auto;
   padding: auto;
   font-weight: normal;
+  color: white;
 }
 
 @media screen and (max-width: 870px) {
@@ -329,9 +353,6 @@ header a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
-  .content .choice__choices__type {
-    width: 93%;
   }
   .content .choice__choices__type__text {
     justify-content: space-around;
@@ -393,6 +414,52 @@ body {
 a {
   color: black;
   text-decoration: none;
+}
+
+.loader {
+  /* la base */
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* emplacement */
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: linear-gradient(to bottom right, #ff79da, #9356dc, #99e2d0);
+  width: 100%;
+  height: 100%;
+  line-height: 100%;
+  vertical-align: middle;
+  text-align: center;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  animation: loader 2.5s 1.2s linear forwards;
+}
+.loader__page {
+  border: 10px solid grey;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-top: 20px solid #9356dc;
+  border-bottom: 20px solid #ff79da;
+  border-left: 20px solid #99e2d0;
+  border-right: 20px solid #99e2d0;
+  animation: loader__page 1.5s linear 1s forwards;
+}
+.loader__page p {
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .logo {
@@ -494,6 +561,15 @@ header a {
   border-radius: 40px;
   width: 60%;
   background: linear-gradient(0deg, #9356dc, #ff79da);
+  box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.introduction__search:hover {
+  box-shadow: 1px 12px 13px -11px rgba(0, 0, 0, 0.75);
+  transform: scale(1.1);
+}
+.introduction__search a {
+  color: white;
 }
 
 .fonction h2 {
@@ -643,12 +719,6 @@ footer {
   background: #595959;
   bottom: 0px;
 }
-footer h3 {
-  font-family: "Shrikhand", cursive;
-  font-weight: bold;
-  padding: 20px 0;
-  margin-left: 40px;
-}
 footer ul {
   margin-left: 40px;
   display: flex;
@@ -679,6 +749,13 @@ footer ul li a i {
 }
 .footer a {
   color: white;
+}
+.footer img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  filter: invert(100%);
+  width: 180px;
+  margin-left: 40px;
 }
 
 .bloc-couleur {

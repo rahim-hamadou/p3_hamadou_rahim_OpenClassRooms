@@ -136,7 +136,7 @@ header {
             -webkit-animation: choice 700ms linear forwards;
             background: white;
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             flex-wrap: nowrap;
             flex-direction: row;
             border: 0.3px solid #1c6ea400;
@@ -149,14 +149,18 @@ header {
             padding-right: 0;
             margin: 10px 0;
             text-overflow: ellipsis;
+            &:hover {
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
             &:hover i {
-                animation: spin-check 0.3s 0.2s linear forwards;
+                animation: spin-check 0.4s 0.3s linear forwards;
             }
             &:hover .choice__choices__type__check {
-                animation: slide-check 300ms linear forwards;
+                animation: slide-check 500ms linear forwards;
             }
             &:hover .choice__choices__type__price {
-                animation: slide-price 300ms linear forwards;
+                animation: slide-price 500ms linear forwards;
             }
             &__text {
                 text-overflow: ellipsis;
@@ -172,11 +176,24 @@ header {
                     overflow: hidden;
                     font-weight: normal;
                 }
+                // &:hover h4 {
+                //     white-space: nowrap;
+                //     text-overflow: ellipsis;
+                //     overflow: hidden;
+                //     width: 50%;
+                // }
+                // &:hover h3 {
+                //     white-space: nowrap;
+                //     text-overflow: ellipsis;
+                //     overflow: hidden;
+                //     width: 50%;
+                // }
             }
             &__price {
-                position: absolute;
-                left: 92%;
-                margin-bottom: -30px;
+                // position: absolute;
+                // left: 92%;
+                margin-right: 20px;
+                margin-bottom: 10px;
             }
             &__check {
                 left: 100%;
@@ -193,6 +210,20 @@ header {
     }
 }
 
+.choice__choices__type__text:hover h3 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 50%;
+}
+
+.choice__choices__type__text:hover h4 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 50%;
+}
+
 .order {
     display: flex;
     padding: 10px;
@@ -203,12 +234,19 @@ header {
     border-radius: 40px;
     width: 40%;
     background: linear-gradient(0deg, #9356dc, #ff79da);
+    box-shadow: 0px 5px 5px 1px rgb(0 0 0 / 10%);
+    transition: transform 0.3s;
+    &:hover {
+        box-shadow: 1px 12px 13px -11px rgba(0, 0, 0, 0.75);
+        transform: scale(1.1);
+    }
     & a {
         text-align: center;
         font-size: 120%;
         margin: auto;
         padding: auto;
         font-weight: normal;
+        color: white;
     }
 }
 
@@ -246,7 +284,7 @@ header {
                     // margin-right: 70%;
                 }
                 &__type {
-                    width: 93%;
+                    // width: 93%;
                     &__text {
                         justify-content: space-around;
                     }
