@@ -29,6 +29,11 @@ body {
     font-family: "roboto";
 }
 
+h1,
+h2 {
+    font-family: "Shrikhand";
+}
+
 a {
     color: black;
     text-decoration: none;
@@ -94,11 +99,13 @@ a {
     padding: 0 40px;
     border: none;
     box-shadow: none;
+    margin-top: 10px;
     & h1 {
         margin: auto;
         text-align: center;
     }
     & img {
+        transform: scale(0.8);
         width: 100%;
         margin: auto;
     }
@@ -109,9 +116,6 @@ header {
     & .logo {
         border: none;
         box-shadow: none;
-        // width: 100%;
-        // border-bottom: 2px solid #a4a4a4;
-        // box-shadow: 0px 0px 20px 12px rgba(0, 0, 0, 0.26);
         & h1 {
             margin: auto;
             text-align: center;
@@ -150,6 +154,7 @@ header {
     box-shadow: inset 0px 12px 5px -6px rgba(206, 206, 206, 0.8);
     border: 0px solid #cecece;
     & i {
+        transform: scale(0.6);
         margin: 15px;
     }
     & p {
@@ -202,11 +207,6 @@ header {
     display: flex;
     justify-content: space-around;
     &__step {
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // flex-wrap: nowrap;
-        // flex-direction: row;
         text-align: center;
         border: 0.3px solid #1c6ea400;
         border-radius: 25px;
@@ -234,6 +234,7 @@ header {
             border-radius: 25px;
             padding: 6px 14px;
             background: #9356dc;
+            color: white;
         }
         &__detail {
             padding-top: 20px;
@@ -243,6 +244,7 @@ header {
 }
 
 .place {
+    background: #f6f6f6;
     & h2 {
         padding: 40px 40px;
     }
@@ -273,7 +275,7 @@ header {
                 -moz-transition: all 0.3s 0s ease;
                 -o-transition: all 0.3s 0s ease;
                 transition: all 0.3s 0s ease;
-                transform: scale(1.08);
+                transform: scale(1.04);
             }
             & .new {
                 position: absolute;
@@ -321,10 +323,6 @@ header {
                 &__heart {
                     position: relative;
                     font-size: 130%;
-                    // &:hover {
-                    //     background-clip: text;
-                    //     animation: color-change-2x 1.2s linear forwards;
-                    // }
                 }
             }
         }
@@ -350,9 +348,10 @@ header {
 }
 
 footer {
-    background: #595959;
+    background: #353535;
     bottom: 0px;
     & ul {
+        padding: 20px 0;
         margin-left: 40px;
         display: flex;
         flex-direction: column;
@@ -385,7 +384,7 @@ footer {
     }
     & img {
         margin-top: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         filter: invert(100%);
         width: 180px;
         margin-left: 40px;
@@ -433,27 +432,30 @@ footer {
             }
         }
     }
-    .place h2 {
-        padding: 40px 20px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-    }
-    .place__grille {
-        display: flex;
-        flex-direction: column;
-        &__places {
-            width: 90%;
-            & p {
-                left: 80%;
-                top: 7%;
-            }
-            &__description {
-                justify-content: space-between;
-                &__text {
-                    margin-left: 20px;
+    .place {
+        background: #f6f6f6;
+        .place h2 {
+            padding: 20px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .place__grille {
+            display: flex;
+            flex-direction: column;
+            &__places {
+                width: 90%;
+                & p {
+                    left: 80%;
+                    top: 7%;
                 }
-                &__heart {
-                    margin-right: 20px;
+                &__description {
+                    justify-content: space-between;
+                    &__text {
+                        margin-left: 20px;
+                    }
+                    &__heart {
+                        margin-right: 20px;
+                    }
                 }
             }
         }

@@ -66,14 +66,6 @@
     opacity: 1;
   }
 }
-@keyframes color-change-2x {
-  0% {
-    color: #ffffff;
-  }
-  100% {
-    color: #b22cff;
-  }
-}
 @keyframes spin-check {
   from {
     transform: rotate(-360deg);
@@ -183,9 +175,6 @@ header a {
 .content .title i {
   font-size: 130%;
 }
-.content .title i:hover {
-  animation: color-change-2x 1s linear forwards;
-}
 .content .title .fa-heart {
   font-size: 150%;
   color: white;
@@ -217,6 +206,7 @@ header a {
   align-items: flex-start;
 }
 .content .choice__choices h2 {
+  font-weight: 100;
   margin: 25px;
   margin-bottom: 8px;
   margin-left: 10px;
@@ -273,7 +263,7 @@ header a {
 }
 .content .choice__choices__type__price {
   margin-right: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 .content .choice__choices__type__check {
   left: 100%;
@@ -363,6 +353,10 @@ header a {
   .content .title {
     justify-content: space-around;
   }
+
+  .order {
+    width: 55%;
+  }
 }
 @media screen and (min-width: 870px) and (max-width: 1330px) {
   header .background-page {
@@ -409,6 +403,11 @@ header a {
 
 body {
   font-family: "roboto";
+}
+
+h1,
+h2 {
+  font-family: "Shrikhand";
 }
 
 a {
@@ -475,12 +474,14 @@ a {
   padding: 0 40px;
   border: none;
   box-shadow: none;
+  margin-top: 10px;
 }
 .logo__main h1 {
   margin: auto;
   text-align: center;
 }
 .logo__main img {
+  transform: scale(0.8);
   width: 100%;
   margin: auto;
 }
@@ -532,6 +533,7 @@ header a {
   border: 0px solid #cecece;
 }
 .exploration .location i {
+  transform: scale(0.6);
   margin: 15px;
 }
 .exploration .location p {
@@ -610,12 +612,16 @@ header a {
   border-radius: 25px;
   padding: 6px 14px;
   background: #9356dc;
+  color: white;
 }
 .fonctions__step__detail {
   padding-top: 20px;
   width: 100%;
 }
 
+.place {
+  background: #f6f6f6;
+}
 .place h2 {
   padding: 40px 40px;
 }
@@ -648,7 +654,7 @@ header a {
   -moz-transition: all 0.3s 0s ease;
   -o-transition: all 0.3s 0s ease;
   transition: all 0.3s 0s ease;
-  transform: scale(1.08);
+  transform: scale(1.04);
 }
 .place__grille__places .new {
   position: absolute;
@@ -716,10 +722,11 @@ header a {
 }
 
 footer {
-  background: #595959;
+  background: #353535;
   bottom: 0px;
 }
 footer ul {
+  padding: 20px 0;
   margin-left: 40px;
   display: flex;
   flex-direction: column;
@@ -752,7 +759,7 @@ footer ul li a i {
 }
 .footer img {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   filter: invert(100%);
   width: 180px;
   margin-left: 40px;
@@ -800,30 +807,32 @@ footer ul li a i {
     margin-right: 10px;
   }
 
-  .place h2 {
-    padding: 40px 20px;
+  .place {
+    background: #f6f6f6;
+  }
+  .place .place h2 {
+    padding: 20px;
     text-overflow: ellipsis;
     overflow: hidden;
   }
-
-  .place__grille {
+  .place .place__grille {
     display: flex;
     flex-direction: column;
   }
-  .place__grille__places {
+  .place .place__grille__places {
     width: 90%;
   }
-  .place__grille__places p {
+  .place .place__grille__places p {
     left: 80%;
     top: 7%;
   }
-  .place__grille__places__description {
+  .place .place__grille__places__description {
     justify-content: space-between;
   }
-  .place__grille__places__description__text {
+  .place .place__grille__places__description__text {
     margin-left: 20px;
   }
-  .place__grille__places__description__heart {
+  .place .place__grille__places__description__heart {
     margin-right: 20px;
   }
 }
