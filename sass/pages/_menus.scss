@@ -24,7 +24,6 @@ header {
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            width: 60;
             width: 60%;
         }
     }
@@ -220,7 +219,6 @@ header {
         text-align: center;
         font-size: 120%;
         margin: auto;
-        padding: auto;
         font-weight: normal;
         color: white;
     }
@@ -260,6 +258,7 @@ header {
                 &__type {
                     &__text {
                         justify-content: space-around;
+                        text-overflow: ellipsis;
                     }
                     &__price {
                         padding-bottom: 8px;
