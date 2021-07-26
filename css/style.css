@@ -274,6 +274,7 @@ header a {
   opacity: 0;
 }
 .content .choice__choices__type__check i {
+  font-size: 120%;
   color: white;
 }
 
