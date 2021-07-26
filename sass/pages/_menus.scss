@@ -117,8 +117,8 @@ header {
             margin-left: 10px;
         }
         &__choices__type {
-            text-overflow: ellipsis;
-            overflow: hidden;
+            // text-overflow: ellipsis;
+            // overflow: hidden;
             position: relative;
             animation: choice 700ms linear forwards;
             -webkit-animation: choice 700ms linear forwards;
@@ -151,8 +151,8 @@ header {
                 animation: slide-price 500ms linear forwards;
             }
             &__text {
-                text-overflow: ellipsis;
-                overflow: hidden;
+                // text-overflow: ellipsis;
+                // overflow: hidden;
                 display: flex;
                 flex-direction: column;
                 flex-wrap: nowrap;
@@ -160,8 +160,8 @@ header {
                 height: 100%;
                 justify-content: center;
                 & h4 {
-                    text-overflow: ellipsis;
-                    overflow: hidden;
+                    // text-overflow: ellipsis;
+                    // overflow: hidden;
                     font-weight: normal;
                 }
             }
@@ -186,15 +186,15 @@ header {
 }
 
 .choice__choices__type__text:hover h3 {
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    // white-space: nowrap;
+    // text-overflow: ellipsis;
     overflow: hidden;
     width: 50%;
 }
 
 .choice__choices__type__text:hover h4 {
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    // white-space: nowrap;
+    // text-overflow: ellipsis;
     overflow: hidden;
     width: 50%;
 }

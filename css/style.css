@@ -211,8 +211,6 @@ header a {
   margin-left: 10px;
 }
 .content .choice__choices__type {
-  text-overflow: ellipsis;
-  overflow: hidden;
   position: relative;
   animation: choice 700ms linear forwards;
   -webkit-animation: choice 700ms linear forwards;
@@ -246,8 +244,6 @@ header a {
   animation: slide-price 500ms linear forwards;
 }
 .content .choice__choices__type__text {
-  text-overflow: ellipsis;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -256,8 +252,6 @@ header a {
   justify-content: center;
 }
 .content .choice__choices__type__text h4 {
-  text-overflow: ellipsis;
-  overflow: hidden;
   font-weight: normal;
 }
 .content .choice__choices__type__price {
@@ -278,15 +272,11 @@ header a {
 }
 
 .choice__choices__type__text:hover h3 {
-  white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
   width: 50%;
 }
 
 .choice__choices__type__text:hover h4 {
-  white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
   width: 50%;
 }
