@@ -106,9 +106,80 @@ header {
         align-items: center;
         &__choices {
             width: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            &__type {
+                position: relative;
+                background: white;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                // border: 0.3px solid #1c6ea400;
+                border-radius: 25px;
+                width: 100%;
+                height: 80px;
+                box-shadow: 0px 5px 5px 1px rgb(0 0 0 / 10%);
+                padding: 0 10px;
+                padding-right: 0;
+                margin: 10px 0;
+                text-overflow: ellipsis;
+                opacity: 0;
+                cursor: pointer;
+                &:hover .choice__choices__type__content__price {
+                    padding-left: 75px;
+                }
+                &:hover i {
+                    animation: spin-check 0.4s 0.3s linear both;
+                }
+                &:hover .choice__choices__type__check {
+                    animation: slide-check 400ms 100ms linear both;
+                }
+                &:hover .choice__choices__type__content__price {
+                    animation: slide-price 500ms ease-in-out both;
+                }
+                &__content {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    align-items: center;
+                    &__text {
+                        margin-left: 10px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        & h3 {
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                        }
+                        & h4 {
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            font-weight: 400;
+                        }
+                    }
+                    &__price {
+                        padding-right: 20px;
+                        font-weight: bold;
+                        padding-left: 30px;
+                    }
+                }
+                &__check {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    right: 0%;
+                    position: absolute;
+                    background-color: #99e2d0;
+                    border-radius: 0 25px 25px 0;
+                    opacity: 1;
+                    height: 100%;
+                    padding: 0 20px;
+                    opacity: 0;
+                    & i {
+                        font-size: 160%;
+                        color: white;
+                    }
+                }
+            }
         }
         &__choices h2 {
             font-weight: 100;
@@ -116,87 +187,43 @@ header {
             margin-bottom: 8px;
             margin-left: 10px;
         }
-        &__choices__type {
-            // text-overflow: ellipsis;
-            // overflow: hidden;
-            position: relative;
-            animation: choice 700ms linear forwards;
-            -webkit-animation: choice 700ms linear forwards;
-            background: white;
-            display: flex;
-            align-items: flex-end;
-            flex-wrap: nowrap;
-            flex-direction: row;
-            border: 0.3px solid #1c6ea400;
-            border-radius: 25px;
-            width: 100%;
-            height: 80px;
-            box-shadow: 0px 5px 5px 1px rgb(0 0 0 / 10%);
-            justify-content: space-between;
-            padding: 0 10px;
-            padding-right: 0;
-            margin: 10px 0;
-            text-overflow: ellipsis;
-            &:hover {
-                text-overflow: ellipsis;
-                overflow: hidden;
-            }
-            &:hover i {
-                animation: spin-check 0.4s 0.3s linear forwards;
-            }
-            &:hover .choice__choices__type__check {
-                animation: slide-check 500ms linear forwards;
-            }
-            &:hover .choice__choices__type__price {
-                animation: slide-price 500ms linear forwards;
-            }
-            &__text {
-                // text-overflow: ellipsis;
-                // overflow: hidden;
-                display: flex;
-                flex-direction: column;
-                flex-wrap: nowrap;
-                align-items: flex-start;
-                height: 100%;
-                justify-content: center;
-                & h4 {
-                    // text-overflow: ellipsis;
-                    // overflow: hidden;
-                    font-weight: normal;
-                }
-            }
-            &__price {
-                margin-right: 20px;
-                margin-bottom: 0;
-            }
-            &__check {
-                left: 100%;
-                position: absolute;
-                background-color: #99e2d0;
-                padding: 32px 20px;
-                border-radius: 0 25px 25px 0;
-                opacity: 0;
-                & i {
-                    font-size: 120%;
-                    color: white;
-                }
-            }
-        }
     }
 }
 
-.choice__choices__type__text:hover h3 {
-    // white-space: nowrap;
-    // text-overflow: ellipsis;
-    overflow: hidden;
-    width: 50%;
+.choice__choices__type:nth-child(3) {
+    animation: choice 700ms linear forwards;
 }
 
-.choice__choices__type__text:hover h4 {
-    // white-space: nowrap;
-    // text-overflow: ellipsis;
-    overflow: hidden;
-    width: 50%;
+.choice__choices__type:nth-child(4) {
+    animation: choice 700ms 0.1s linear forwards;
+}
+
+.choice__choices__type:nth-child(5) {
+    animation: choice 700ms 0.2s linear forwards;
+}
+
+.choice__choices__type:nth-child(8) {
+    animation: choice 700ms 0.3s linear forwards;
+}
+
+.choice__choices__type:nth-child(9) {
+    animation: choice 700ms 0.4s linear forwards;
+}
+
+.choice__choices__type:nth-child(10) {
+    animation: choice 700ms 0.5s linear forwards;
+}
+
+.choice__choices__type:nth-child(13) {
+    animation: choice 700ms 0.6s linear forwards;
+}
+
+.choice__choices__type:nth-child(14) {
+    animation: choice 700ms 0.7s linear forwards;
+}
+
+.choice__choices__type:nth-child(15) {
+    animation: choice 700ms 0.8s linear forwards;
 }
 
 .order {
@@ -254,7 +281,6 @@ header {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
-                & h2 {}
                 &__type {
                     &__text {
                         justify-content: space-around;
