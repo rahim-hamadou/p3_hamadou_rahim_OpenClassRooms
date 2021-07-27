@@ -111,7 +111,7 @@ header .head-page {
   position: fixed;
   top: 0;
   background: white;
-  width: 100%;
+  max-width: 100%;
   padding: 18px;
 }
 header .head-page__content {
@@ -139,7 +139,7 @@ header a {
 
 .background-page {
   top: 0;
-  width: 100%;
+  max-width: 100%;
   position: fixed;
   z-index: -1;
 }
@@ -162,8 +162,8 @@ header a {
 }
 .content .title {
   display: flex;
-  width: 100%;
-  justify-content: space-evenly;
+  width: 50%;
+  justify-content: space-between;
   align-items: center;
   margin: 30px;
 }
@@ -380,6 +380,7 @@ header a {
   }
   .content .title {
     justify-content: space-around;
+    width: 100%;
   }
 
   .order {
@@ -412,6 +413,7 @@ header a {
   }
   .content .title {
     justify-content: space-around;
+    width: 150vw;
   }
 }
 @font-face {
@@ -430,7 +432,7 @@ header a {
 }
 
 body {
-  font-family: "roboto";
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
@@ -657,7 +659,7 @@ header a {
   background: #f6f6f6;
 }
 .place h2 {
-  padding: 20px 40px;
+  padding: 20px 30px;
 }
 .place__grille {
   display: flex;
