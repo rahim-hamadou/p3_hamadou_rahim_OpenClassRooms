@@ -169,8 +169,9 @@ header a {
 }
 .content .title h1 {
   font-family: "Shrikhand", cursive;
-  font-weight: bold;
-  font-size: 200%;
+  font-weight: bolder;
+  font-size: 160%;
+  font-style: italic;
 }
 .content .title i {
   font-size: 130%;
@@ -225,10 +226,10 @@ header a {
   padding-left: 75px;
 }
 .content .choice__choices__type:hover i {
-  animation: spin-check 0.4s 0.3s linear both;
+  animation: spin-check 0.4s 0.3s ease-in-out both;
 }
 .content .choice__choices__type:hover .choice__choices__type__check {
-  animation: slide-check 400ms 100ms linear both;
+  animation: slide-check 400ms 100ms ease-in-out both;
 }
 .content .choice__choices__type:hover .choice__choices__type__content__price {
   animation: slide-price 500ms ease-in-out both;
@@ -326,7 +327,7 @@ header a {
   color: white;
   border: 1px solid #a4a4a4;
   border-radius: 40px;
-  width: 40%;
+  width: 25vw;
   background: linear-gradient(0deg, #9356dc, #ff79da);
   box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
@@ -508,7 +509,7 @@ a {
   text-align: center;
 }
 .logo__main img {
-  transform: scale(0.8);
+  transform: scale(0.6);
   width: 100%;
   margin: auto;
 }
@@ -528,6 +529,7 @@ header .logo h1 {
   text-align: center;
 }
 header .logo img {
+  transform: scale(0.6);
   width: 100%;
   margin: auto;
 }
@@ -543,14 +545,13 @@ header a {
   flex-wrap: nowrap;
   width: 100%;
   padding-bottom: 50px;
-  margin-bottom: 50px;
-  background: #ededed;
+  background: #f6f6f6;
 }
 
 .exploration .location {
   height: 50px;
   width: 100%;
-  background: #dedede;
+  background: #eaeaea;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -569,14 +570,16 @@ header a {
 }
 
 .introduction {
-  background: #ededed;
+  background: #f6f6f6;
   width: 100%;
 }
 .introduction h2 {
   text-align: center;
   margin: 25px 0;
+  padding: 0 15px;
 }
 .introduction p {
+  padding: 0 15px;
   text-align: center;
   font-size: 120%;
   margin: 25px 0;
@@ -584,6 +587,7 @@ header a {
 }
 .introduction__search {
   margin: auto;
+  padding: 0 15px;
   color: white;
   text-align: center;
   border: 1px solid #a4a4a4;
@@ -785,9 +789,8 @@ footer ul li a i {
 }
 .footer img {
   margin-top: 20px;
-  margin-bottom: 10px;
   filter: invert(100%);
-  width: 180px;
+  width: 150px;
   margin-left: 40px;
 }
 

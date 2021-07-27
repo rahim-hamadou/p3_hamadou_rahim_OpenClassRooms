@@ -105,7 +105,7 @@ a {
         text-align: center;
     }
     & img {
-        transform: scale(0.8);
+        transform: scale(0.6);
         width: 100%;
         margin: auto;
     }
@@ -121,6 +121,7 @@ header {
             text-align: center;
         }
         & img {
+            transform: scale(0.6);
             width: 100%;
             margin: auto;
         }
@@ -138,14 +139,14 @@ header {
     flex-wrap: nowrap;
     width: 100%;
     padding-bottom: 50px;
-    margin-bottom: 50px;
-    background: #ededed;
+    // margin-bottom: 50px;
+    background: #f6f6f6;
 }
 
 .exploration .location {
     height: 50px;
     width: 100%;
-    background: #dedede;
+    background: #eaeaea;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -164,13 +165,15 @@ header {
 }
 
 .introduction {
-    background: #ededed;
+    background: #f6f6f6;
     width: 100%;
     & h2 {
         text-align: center;
         margin: 25px 0;
+        padding: 0 15px;
     }
     & p {
+        padding: 0 15px;
         text-align: center;
         font-size: 120%;
         margin: 25px 0;
@@ -178,6 +181,7 @@ header {
     }
     &__search {
         margin: auto;
+        padding: 0 15px;
         color: white;
         text-align: center;
         border: 1px solid #a4a4a4;
@@ -383,9 +387,9 @@ footer {
     }
     & img {
         margin-top: 20px;
-        margin-bottom: 10px;
+        // margin-bottom: 10px;
         filter: invert(100%);
-        width: 180px;
+        width: 150px;
         margin-left: 40px;
     }
 }
