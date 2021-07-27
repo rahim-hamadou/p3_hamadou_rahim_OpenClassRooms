@@ -68,7 +68,7 @@
 }
 @keyframes spin-check {
   from {
-    transform: rotate(-360deg);
+    transform: rotate(-280deg);
   }
   to {
     transform: rotate(0deg);
@@ -168,7 +168,7 @@ header a {
   margin: 30px;
 }
 .content .title h1 {
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand";
   font-weight: bolder;
   font-size: 160%;
   font-style: italic;
@@ -433,9 +433,12 @@ body {
   font-family: "roboto";
 }
 
-h1,
-h2 {
+h1 {
   font-family: "Shrikhand";
+}
+
+h2 {
+  font-family: roboto;
 }
 
 a {
@@ -445,7 +448,7 @@ a {
 
 .loader {
   /* la base */
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand";
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -482,7 +485,7 @@ a {
   animation: loader__page 1.5s linear 1s forwards;
 }
 .loader__page p {
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand";
   display: flex;
   justify-content: center;
   align-items: center;
@@ -490,13 +493,13 @@ a {
 }
 
 .logo {
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand";
   font-weight: bold;
   font-size: 120%;
 }
 
 .logo__main {
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand";
   font-weight: bold;
   font-size: 120%;
   padding: 0 40px;
@@ -509,7 +512,7 @@ a {
   text-align: center;
 }
 .logo__main img {
-  transform: scale(0.6);
+  transform: scale(0.7);
   width: 100%;
   margin: auto;
 }
@@ -529,7 +532,7 @@ header .logo h1 {
   text-align: center;
 }
 header .logo img {
-  transform: scale(0.6);
+  transform: scale(0.8);
   width: 100%;
   margin: auto;
 }
@@ -561,7 +564,7 @@ header a {
   border: 0px solid #cecece;
 }
 .exploration .location i {
-  transform: scale(0.6);
+  transform: scale(0.5);
   margin: 15px;
 }
 .exploration .location p {
@@ -581,8 +584,8 @@ header a {
 .introduction p {
   padding: 0 15px;
   text-align: center;
-  font-size: 120%;
-  margin: 25px 0;
+  font-size: 20px;
+  margin: 20px 0;
   font-weight: normal;
 }
 .introduction__search {
@@ -606,7 +609,7 @@ header a {
 }
 
 .fonction h2 {
-  padding: 30px 40px;
+  padding: 0 40px;
 }
 
 .fonctions {
@@ -654,7 +657,7 @@ header a {
   background: #f6f6f6;
 }
 .place h2 {
-  padding: 40px 40px;
+  padding: 20px 40px;
 }
 .place__grille {
   display: flex;
@@ -675,6 +678,7 @@ header a {
   border-radius: 20px;
   box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.1);
   margin: 20px 0;
+  padding-bottom: 10px;
   overflow: hidden;
   width: 22%;
   height: 230px;
@@ -757,7 +761,7 @@ footer {
 }
 footer ul {
   padding: 20px 0;
-  margin-left: 40px;
+  margin-left: 30px;
   display: flex;
   flex-direction: column;
 }
@@ -791,7 +795,7 @@ footer ul li a i {
   margin-top: 20px;
   filter: invert(100%);
   width: 150px;
-  margin-left: 40px;
+  margin-left: 30px;
 }
 
 .bloc-couleur {
@@ -816,7 +820,7 @@ footer ul li a i {
   }
 
   .fonction h2 {
-    padding: 30px 20px;
+    padding: 20px 40px;
     text-overflow: ellipsis;
     overflow: hidden;
   }
