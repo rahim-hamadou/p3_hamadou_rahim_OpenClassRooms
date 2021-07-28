@@ -130,6 +130,7 @@ header i {
   cursor: pointer;
 }
 header .logo {
+  max-width: 100%;
   border: none;
   box-shadow: none;
 }
@@ -357,6 +358,7 @@ header a {
   }
   header .head-page__content i {
     font-weight: 900;
+    font-size: 30px;
     margin-bottom: 10px;
   }
   header .head-page__content .logo img {
@@ -376,6 +378,7 @@ header a {
     margin-top: 65%;
     margin-left: 0;
     margin-right: 0;
+    overflow: hidden;
   }
   .content .choice__choices {
     width: 90%;
@@ -404,8 +407,11 @@ header a {
     top: 30px;
     max-width: 100%;
   }
-  header .head__page__arrow {
-    left: 150px;
+  header .head__page__arrow i {
+    position: absolute;
+    left: -180px;
+    top: -20px;
+    font-size: 30px;
   }
 
   .content {
@@ -442,6 +448,7 @@ header a {
 * {
   margin: 0px;
   padding: 0px;
+  max-width: 100%;
 }
 
 body {
@@ -514,6 +521,9 @@ a {
 }
 
 .logo__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Shrikhand";
   font-weight: bold;
   font-size: 120%;
@@ -532,12 +542,6 @@ a {
   margin: auto;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-content: space-around;
-  align-items: center;
-}
 header .logo {
   border: none;
   box-shadow: none;
