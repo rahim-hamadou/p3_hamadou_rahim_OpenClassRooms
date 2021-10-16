@@ -12,4 +12,5 @@ Assurer la cohérence graphique d'un site web
 
 Instruction: 
 
-Lancer la page herbergée par github pour decouvrir un site dynamique grace au css
+Lancer la page herbergée par github pour decouvrir un site dynamique grace au css.
+ https://rumgalxdead.github.io/p3_rahim_hamadou/
