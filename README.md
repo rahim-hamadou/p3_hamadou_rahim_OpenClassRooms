@@ -1,4 +1,4 @@
-p3_rahim_hamadou
+p3_rahim_hamadou. OHMYFOOD
 
 Projet de Dynamisez une page web avec des animations CSS via OpenClassRooms.
 
